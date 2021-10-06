@@ -1,5 +1,41 @@
 .carousel-img {
     max-height: 100vh;
-    min-width: 100%;
+    min-width: 100vw;
     object-fit: cover;
+}
+html { /* body won't work ¯\_(ツ)_/¯ */
+    scroll-snap-type: y mandatory;
+  }
+.carousel{
+    height: 100vh;
+    position: fixed !important;
+    top:0;
+    z-index: -1;
+    width: 100vw;
+}
+.slider{
+    background-color: rgba(128, 128, 128, 0.26);
+    height: 100vh;
+    position: relative;
+    z-index: 1000;
+    position:relative;
+    scroll-snap-align: start;
+    
+}
+.title{
+    padding-top: 8vh;
+    width: 55vw;
+}
+.slider p{
+    font-family: monospace;
+    padding-top: 55vh;
+    color: rgb(241, 241, 241);
+    letter-spacing: 6px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
