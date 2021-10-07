@@ -1,9 +1,9 @@
 .carousel-img {
-    max-height: 100vh;
+    height: 100vh;
     min-width: 100vw;
     object-fit: cover;
 }
-html { /* body won't work ¯\_(ツ)_/¯ */
+html { /* body won't work ¯\_(ツ)_/¯ https://css-tricks.com/practical-css-scroll-snapping/ */
     scroll-snap-type: y mandatory;
   }
 .carousel{
@@ -13,8 +13,8 @@ html { /* body won't work ¯\_(ツ)_/¯ */
     z-index: -1;
     width: 100vw;
 }
+
 .slider{
-    background-color: rgba(128, 128, 128, 0.26);
     height: 100vh;
     position: relative;
     z-index: 1000;
@@ -22,15 +22,27 @@ html { /* body won't work ¯\_(ツ)_/¯ */
     scroll-snap-align: start;
     
 }
+.overlay{
+    background-color: rgba(128, 128, 128, 0.26);
+    color: rgb(241, 241, 241);
+}
+.info{
+    background-color: white;
+    color:rgb(70, 70, 70)
+}
 .title{
     padding-top: 8vh;
     width: 55vw;
 }
-.slider p{
-    font-family: monospace;
+.overlay p{
     padding-top: 55vh;
-    color: rgb(241, 241, 241);
+}
+p{
+    font-family: monospace;
     letter-spacing: 6px;
+}
+.info p{
+    padding-top: 30vw;
 }
 
 .center{
