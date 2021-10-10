@@ -1,9 +1,16 @@
 .carousel-img {
-    height: 100vh;
-    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
     object-fit: cover;
+    margin-left: calc(-1*((100% - 100vw)/2));
 }
+.carousel-inner{
+    width: 100%;
 
+}
+#carouselExampleIndicators button{
+    visibility: hidden !important;
+}
 html {
     /* body won't work ¯\_(ツ)_/¯ https://css-tricks.com/practical-css-scroll-snapping/ */
     scroll-snap-type: y mandatory;
@@ -42,7 +49,13 @@ html {
 }
 
 .overlay p {
-    padding-top: 55vh;
+    position: absolute;
+bottom: 5%;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
 }
 
 p {
@@ -51,7 +64,13 @@ p {
 }
 
 .info p {
-    padding-top: 30vw;
+    position: absolute;
+    bottom: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .center {
@@ -76,3 +95,7 @@ animation: down 2s infinite;
     100% {bottom: 3%}
 
 }
+
+@media only screen and (max-width: 600px) {
+    
+  }
