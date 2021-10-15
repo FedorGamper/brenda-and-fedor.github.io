@@ -1,21 +1,9 @@
-.carousel-img {
-    min-height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    margin-left: calc(-1*((100% - 100vw)/2));
-}
-.carousel-inner{
-    width: 100%;
-
-}
-#carouselExampleIndicators button{
-    visibility: hidden !important;
-}
 html {
     /* body won't work ¯\_(ツ)_/¯ https://css-tricks.com/practical-css-scroll-snapping/ */
     scroll-snap-type: y mandatory;
 }
 
+/* carousel */
 .carousel {
     height: 100vh;
     position: fixed !important;
@@ -24,13 +12,63 @@ html {
     width: 100vw;
 }
 
+.carousel-inner {
+    width: 100%;
+
+}
+
+.carousel-img {
+    min-height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    margin-left: calc(-1*((100% - 100vw)/2));
+}
+
+#carouselExampleIndicators button {
+    visibility: hidden !important;
+}
+
+.scroll-down,
+.scroll-down:hover {
+    position: absolute;
+    bottom: 8%;
+    margin-right: auto;
+    margin-left: calc(50% - 12.5px);
+    color: rgb(238, 237, 237);
+    animation: down 2s infinite;
+    -webkit-animation: down 2s infinite;
+}
+
+@keyframes down {
+    0% {bottom: 8%}
+    75% {bottom: 8%}
+    100% {bottom: 7%}
+}
+
+@media screen and (min-width: 768px) {
+    .scroll-down, .scroll-down:hover{
+        position: absolute;
+        bottom: 4%;
+        margin-right: auto;
+        margin-left: calc(50% - 12.5px);
+        color: rgb(238, 237, 237);
+        animation: down 2s infinite;
+        -webkit-animation: down 2s infinite;
+    }
+    @keyframes down {
+        0% {bottom: 4%}
+        75% {bottom: 4%}
+        100% {bottom: 3%}
+    }
+}
+
+/* slides */
 .slider {
     height: 100vh;
     position: relative;
     z-index: 1000;
     position: relative;
     scroll-snap-align: start;
-
 }
 
 .overlay {
@@ -43,20 +81,55 @@ html {
     color: rgb(70, 70, 70)
 }
 
+/* overlay */
+/* mobile */
 .title {
+    width: 90vw;
     padding-top: 8vh;
-    width: 55vw;
 }
 
-.overlay p {
+.std {
+    font-size: large;
     position: absolute;
-bottom: 5%;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-text-align: center;
+    bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
+
+.std-separator::before{
+    content: "\a";
+    white-space: pre;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        padding-top: 8vh;
+        width: 55vw;
+    }
+
+    .std {
+        font-size: medium;
+        position: absolute;
+        bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .std-separator{
+        display: inline;
+    }
+    .std-separator::before{
+        content: "|";
+    }
+}
+
+
+
 
 p {
     font-family: monospace;
@@ -79,23 +152,3 @@ p {
     margin-right: auto;
     text-align: center;
 }
-
-.scroll-down, .scroll-down:hover{
-    position: absolute;
-bottom: 4%;
-margin-right: auto;
-margin-left: calc(50% - 12.5px);
-color: rgb(238, 237, 237);
-animation: down 2s infinite;
--webkit-animation: down 2s infinite; 
-}
-@keyframes down {
-    0% {bottom: 4%}
-    75% {bottom: 4%}
-    100% {bottom: 3%}
-
-}
-
-@media only screen and (max-width: 600px) {
-    
-  }
