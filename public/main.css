@@ -44,6 +44,12 @@ html {
     75% {bottom: 8vh}
     100% {bottom: 7vh}
 }
+.show-mobile{
+    display: inline;
+}
+.show-desktop{
+    display: none ;
+}
 
 @media screen and (min-width: 768px) {
     .scroll-down, .scroll-down:hover{
@@ -59,6 +65,13 @@ html {
         0% {bottom: 4vh}
         75% {bottom: 4vh}
         100% {bottom: 3vh}
+    }
+    .show-mobile{
+        display: none;
+        width: 0;
+    }
+    .show-desktop{
+        display: inline;
     }
 }
 
