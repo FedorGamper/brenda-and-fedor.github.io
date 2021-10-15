@@ -1,6 +1,9 @@
-html {
+.wrapper {
     /* body won't work ¯\_(ツ)_/¯ https://css-tricks.com/practical-css-scroll-snapping/ */
     scroll-snap-type: y mandatory;
+    overflow: scroll;
+    margin: 0;
+    height: 100vh;
 }
 
 /* carousel */
