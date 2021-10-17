@@ -175,7 +175,8 @@ p {
 .footer{
     position: absolute;
     bottom: 8vh;
-    width: 100vw;
+    width: 80vw;
+    left: 10vw;
 }
 .footer a{
     color: rgb(70, 70, 70);
