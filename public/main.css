@@ -178,7 +178,8 @@ p {
     width: 80vw;
     left: 10vw;
 }
-.footer a{
+.footer a p{
     color: rgb(70, 70, 70);
     font-size: small;
+    letter-spacing: 1px;
 }
