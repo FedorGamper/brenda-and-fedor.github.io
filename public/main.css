@@ -153,6 +153,7 @@
 p {
     font-family: monospace;
     letter-spacing: 6px;
+    text-decoration: none;
 }
 
 .info p {
@@ -170,4 +171,12 @@ p {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+.footer{
+    position: absolute;
+    bottom: 8vh;
+    width: 100vw;
+}
+.footer a{
+    color: rgb(70, 70, 70);
 }
