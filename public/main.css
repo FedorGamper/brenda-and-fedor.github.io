@@ -5,7 +5,7 @@
     margin: 0;
     height: 100vh;
     width: 100vw;
-    position:absolute;
+    position: absolute;
     top: 0;
 }
 
@@ -46,19 +46,31 @@
 }
 
 @keyframes down-mobile {
-    0% {bottom: 8vh}
-    75% {bottom: 8vh}
-    100% {bottom: 7vh}
+    0% {
+        bottom: 8vh
+    }
+
+    75% {
+        bottom: 8vh
+    }
+
+    100% {
+        bottom: 7vh
+    }
 }
-.show-mobile{
+
+.show-mobile {
     display: inline;
 }
-.show-desktop{
-    display: none ;
+
+.show-desktop {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .scroll-down, .scroll-down:hover{
+
+    .scroll-down,
+    .scroll-down:hover {
         position: absolute;
         bottom: 4vh;
         margin-right: auto;
@@ -67,16 +79,27 @@
         animation: down 2s infinite;
         -webkit-animation: down 2s infinite;
     }
+
     @keyframes down {
-        0% {bottom: 4vh}
-        75% {bottom: 4vh}
-        100% {bottom: 3vh}
+        0% {
+            bottom: 4vh
+        }
+
+        75% {
+            bottom: 4vh
+        }
+
+        100% {
+            bottom: 3vh
+        }
     }
-    .show-mobile{
+
+    .show-mobile {
         display: none;
         width: 0;
     }
-    .show-desktop{
+
+    .show-desktop {
         display: inline;
     }
 }
@@ -118,7 +141,7 @@
     text-align: center;
 }
 
-.std-separator::before{
+.std-separator::before {
     content: "\a";
     white-space: pre;
 }
@@ -130,7 +153,7 @@
     }
 
     .std {
-        font-size: medium;
+        font-size: large;
         position: absolute;
         bottom: 5%;
         margin-left: auto;
@@ -139,16 +162,28 @@
         right: 0;
         text-align: center;
     }
-    .std-separator{
+
+    .std-separator {
         display: inline;
     }
-    .std-separator::before{
+
+    .std-separator::before {
         content: "|";
     }
 }
 
+a{
+    text-decoration: none !important;
+}
 
-
+a p{
+  text-decoration: none; 
+  color: rgb(70, 70, 70);
+}
+a p:hover{
+    color: rgb(167 58 14);
+    text-decoration: none;
+}
 
 p {
     font-family: monospace;
@@ -156,6 +191,7 @@ p {
     text-decoration: none;
 }
 
+/*
 .info p {
     position: absolute;
     bottom: 60%;
@@ -165,21 +201,108 @@ p {
     right: 0;
     text-align: center;
 }
-
+*/
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-.footer{
+
+
+.email p {
+    color: rgb(70, 70, 70);
+    font-size:smaller;
+    letter-spacing: 1px;
+    text-decoration: none;
     position: absolute;
-    bottom: 8vh;
-    width: 80vw;
-    left: 10vw;
+    bottom: 17vh;
+}
+
+.information p:hover{
+    color: rgb(167 58 14);
+}
+
+.information {
+    padding-left: 17vw;
+    padding-top: 10vh;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.information h1 {
+    padding-bottom: 10vh;
+}
+
+.menu img {
+    display: none;
+    position: absolute;
+
+    height: 70vh; 
+    right: 17vw;
+    top: 11vh;
+    overflow: scroll;
+}
+.menu p{
+    padding-top:8px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+
+.menuImg{
+    display: block !important;
+    z-index: -1;
+}
+
+.our-story:hover img,
+.big-day:hover img,
+.registration:hover img,
+.trip:hover img,
+.wishlist:hover img{
+    display: block;
+}
+
+@media screen and (max-width:900px) and (min-width:768px){
+    .menu img{
+        right: 10vw
+    }
+    .information{
+        padding-left: 10vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu img{
+        display: none !important;
+    }
+}
+
+.noInfo{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    padding-top: 20vh;
+}
+.footer{
+    width: 100vw;
+    position: absolute;
+    bottom: 10vw;
+    vertical-align: center;
 }
 .footer a p{
     color: rgb(70, 70, 70);
-    font-size: small;
+    font-size:smaller;
     letter-spacing: 1px;
+    text-decoration: none;
+}
+.footer a p:hover{
+    color: rgb(167 58 14);
+}
+.back{
+    margin: 3em;
+}
+.footer svg{
+    vertical-align:middle;
 }
