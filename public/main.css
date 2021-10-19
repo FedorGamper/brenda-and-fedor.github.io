@@ -1,3 +1,30 @@
+a {
+    text-decoration: none !important;
+}
+
+a p {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+}
+
+a p:hover {
+    color: rgb(167 58 14);
+    text-decoration: none;
+}
+
+p {
+    font-family: monospace;
+    letter-spacing: 6px;
+    text-decoration: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .wrapper {
     /* body won't work ¯\_(ツ)_/¯ https://css-tricks.com/practical-css-scroll-snapping/ */
     scroll-snap-type: y mandatory;
@@ -124,6 +151,7 @@
 }
 
 /* overlay */
+
 /* mobile */
 .title {
     width: 90vw;
@@ -172,25 +200,6 @@
     }
 }
 
-a{
-    text-decoration: none !important;
-}
-
-a p{
-  text-decoration: none; 
-  color: rgb(70, 70, 70);
-}
-a p:hover{
-    color: rgb(167 58 14);
-    text-decoration: none;
-}
-
-p {
-    font-family: monospace;
-    letter-spacing: 6px;
-    text-decoration: none;
-}
-
 /*
 .info p {
     position: absolute;
@@ -202,24 +211,18 @@ p {
     text-align: center;
 }
 */
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
 
 .email p {
     color: rgb(70, 70, 70);
-    font-size:smaller;
+    font-size: smaller;
     letter-spacing: 1px;
     text-decoration: none;
     position: absolute;
     bottom: 17vh;
 }
 
-.information p:hover{
+.information p:hover {
     color: rgb(167 58 14);
 }
 
@@ -239,19 +242,20 @@ p {
     display: none;
     position: absolute;
 
-    height: 70vh; 
+    height: 70vh;
     right: 17vw;
     top: 11vh;
     overflow: scroll;
 }
-.menu p{
-    padding-top:8px;
+
+.menu p {
+    padding-top: 8px;
     padding-bottom: 8px;
     margin: 0;
 }
 
 
-.menuImg{
+.menuImg {
     display: block !important;
     z-index: -1;
 }
@@ -260,49 +264,57 @@ p {
 .big-day:hover img,
 .registration:hover img,
 .trip:hover img,
-.wishlist:hover img{
+.wishlist:hover img {
     display: block;
 }
 
-@media screen and (max-width:900px) and (min-width:768px){
-    .menu img{
+/* smaller screens */
+@media screen and (max-width:900px) and (min-width:768px) {
+    .menu img {
         right: 10vw
     }
-    .information{
+
+    .information {
         padding-left: 10vw;
     }
 }
 
-@media screen and (max-width: 768px){
-    .menu img{
+/* mobile */
+@media screen and (max-width: 768px) {
+    .menu img {
         display: none !important;
     }
 }
 
-.noInfo{
+.noInfo {
     width: 100vw;
     height: 100vh;
     align-items: center;
     padding-top: 20vh;
 }
-.footer{
+
+.footer {
     width: 100vw;
     position: absolute;
     bottom: 10vw;
     vertical-align: center;
 }
-.footer a p{
+
+.footer a p {
     color: rgb(70, 70, 70);
-    font-size:smaller;
+    font-size: smaller;
     letter-spacing: 1px;
     text-decoration: none;
 }
-.footer a p:hover{
+
+.footer a p:hover {
     color: rgb(167 58 14);
 }
-.back{
+
+.back {
     margin: 3em;
 }
-.footer svg{
-    vertical-align:middle;
+
+.footer svg {
+    vertical-align: middle;
 }
