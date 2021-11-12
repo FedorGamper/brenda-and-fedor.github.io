@@ -1,0 +1,56 @@
+@font-face {
+    font-family: bellasia;
+    src: url(../fonts/bellasia/bellasia.ttf);
+  }
+@font-face {
+    font-family: aerotis;
+    src: url(../fonts/aerotis/Aerotis.otf);
+  }
+
+.story h1{
+    padding-top: 15vh;
+}
+.story .slider p{
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: normal;
+    text-align: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.story .slider a p{
+text-align: center;
+}
+
+.story .slider{
+    text-align: center;
+}
+
+.story-img{
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    max-width: 60vw;
+    max-height: 430px;
+    object-fit: cover;
+}
+
+.slider .scroll-down{
+    position: absolute;
+    bottom: 15px;
+    animation: down-story 3s infinite;
+    -webkit-animation: down-story 3s infinite;
+}
+
+@keyframes down-story {
+    0% {
+        bottom: 15px
+    }
+
+    75% {
+        bottom: 12px
+    }
+
+    100% {
+        bottom: 10px
+    }
+}
