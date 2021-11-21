@@ -11,12 +11,13 @@
     padding-top: 15vh;
 }
 .story .slider p{
-    width: 70vw;
+    width: 60vw;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: normal;
     text-align: left;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 0;
 }
 .story .slider a p{
 text-align: center;
@@ -29,8 +30,8 @@ text-align: center;
 .story-img{
     padding-top: 10vh;
     padding-bottom: 5vh;
-    max-width: 60vw;
-    max-height: 430px;
+    max-width: 50vw;
+    max-height: 55vh;
     object-fit: cover;
 }
 
@@ -53,4 +54,7 @@ text-align: center;
     100% {
         bottom: 10px
     }
+}
+.bold{
+    font-weight: bold;
 }
