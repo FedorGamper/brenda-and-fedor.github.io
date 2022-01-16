@@ -14,8 +14,21 @@
 </head>
 
 <body>
+
+ <!-- check language -->
+ <script>
+        if (localStorage.getItem("language") == null) {
+          var userLang = navigator.language || navigator.userLanguage;
+          localStorage.setItem("language", userLang);
+        }
+        var userLang = localStorage.getItem("language")
+        if (userLang.includes("es")) {
+          window.location.replace("es/registration.html")
+        }
+      </script>
+
     <div class="center">
-        <div class="language-link"><a href=./es/registration.html>ESPAÑOL </a> </div> <h1>Registration</h1>
+        <div class="language-link"><a href=./es/registration.html onclick="localStorage.setItem('language','es')">ESPAÑOL </a> </div> <h1>Registration</h1>
 
                 <div class="reg">
                     <img src="public/img/BRE_FED_0133_websize.jpg">

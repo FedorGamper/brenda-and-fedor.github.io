@@ -14,9 +14,23 @@
 </head>
 
 <body>
+
+
+  <!-- check language -->
+  <script>
+        if (localStorage.getItem("language") == null) {
+          var userLang = navigator.language || navigator.userLanguage;
+          localStorage.setItem("language", userLang);
+        }
+        var userLang = localStorage.getItem("language")
+        if (userLang.includes("en")) {
+          window.location.replace("../our-stroy.html")
+        }
+      </script>
+
     <div class="wrapper story">
         <div class="center slider" style="text-align: center;">
-        <div class="language-link"><a href=../our-story.html>ENGLISH </a> </div>
+        <div class="language-link"><a href=../our-story.html onclick="localStorage.setItem('language','en');">ENGLISH </a> </div>
             <h1>Nuestra historia</h1>
             <img class="story-img" style="height: 50vh" src="../public/img/BRE_FED_0141.jpg">
             <div class="scroll-down"><a href="#section-2" class="scroll-down">

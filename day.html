@@ -14,8 +14,21 @@
 </head>
 
 <body>
+
+     <!-- check language -->
+  <script>
+        if (localStorage.getItem("language") == null) {
+          var userLang = navigator.language || navigator.userLanguage;
+          localStorage.setItem("language", userLang);
+        }
+        var userLang = localStorage.getItem("language")
+        if (userLang.includes("es")) {
+          window.location.replace("es/day.html")
+        }
+      </script>
+
     <div class="center">
-        <div class="language-link"><a href=./es/day.html>ESPAÑOL </a> </div> <div class="center">
+        <div class="language-link"><a href=./es/day.html onclick="localStorage.setItem('language','es')">ESPAÑOL </a> </div> <div class="center">
                 <img class="day-picture" src="public/img/day_details_EN.png">
         </div>
 

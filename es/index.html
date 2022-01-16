@@ -20,6 +20,19 @@
 </head>
 
 <body>
+
+  <!-- check language -->
+  <script>
+      if (localStorage.getItem("language") == null) {
+        var userLang = navigator.language || navigator.userLanguage;
+        localStorage.setItem("language", userLang);
+      }
+      var userLang = localStorage.getItem("language")
+      if (userLang.includes("en")) {
+        window.location.replace("../index.html")
+      }
+    </script>
+
   <div class="wrapper">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -80,7 +93,8 @@
 
     <div id="section-3" class=" slider info">
       <!--p class="center">MORE INFORMATION WILL FOLLOW</p-->
-      <div class="language-link"><a href=./../index.html#section-3>ENGLISH </a> </div>
+      <div class="language-link"><a href=./../index.html#section-3
+         onclick="localStorage.setItem('language','en');">ENGLISH </a> </div>
       <div class="information">
         <h1>INFORMACIÓN</h1>
         <div class="menu">

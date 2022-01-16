@@ -12,9 +12,22 @@
 </head>
 
 <body>
+
+  <!-- check language -->
+  <script>
+        if (localStorage.getItem("language") == null) {
+          var userLang = navigator.language || navigator.userLanguage;
+          localStorage.setItem("language", userLang);
+        }
+        var userLang = localStorage.getItem("language")
+        if (userLang.includes("en")) {
+          window.location.replace("../registration.html")
+        }
+      </script>
+
     <div class="center">
 
-    <div class="language-link"><a href=../registration.html>ENGLISH</a></div>
+    <div class="language-link"><a href=../registration.html onclick="localStorage.setItem('language','en');">ENGLISH</a></div>
 
         <h1>Registration</h1>
 
