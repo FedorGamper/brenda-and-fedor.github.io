@@ -298,7 +298,8 @@ h3{
 .big-day:hover img,
 .registration:hover img,
 .trip:hover img,
-.wishlist:hover img {
+.wishlist:hover img 
+.live:hover img{
     display: block;
 }
 
