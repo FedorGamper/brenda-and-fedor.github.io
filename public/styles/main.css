@@ -298,10 +298,10 @@ h3{
 .big-day:hover img,
 .registration:hover img,
 .trip:hover img,
-.wishlist:hover img 
+.wishlist:hover img,
 .live:hover img{
     display: block;
-}
+} 
 
 /* smaller screens */
 @media screen and (max-width:950px) and (min-width:850px) {
